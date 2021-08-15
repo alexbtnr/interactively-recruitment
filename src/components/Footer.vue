@@ -49,6 +49,10 @@
   footer {
     background: #333;
     color: #eee;
+    /* position: fixed; 
+    bottom: 0;
+    left: 0; */
+    width: 100%;
   }
 
   .footer-container {

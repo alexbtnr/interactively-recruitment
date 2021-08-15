@@ -40,9 +40,9 @@
 <style>
   main.main {
     height: 100vh;
+    display: flex;
     justify-content: space-between;
     align-items: center;
-    display: flex;
     overflow-x: hidden;
   }
 
