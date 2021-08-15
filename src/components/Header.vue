@@ -1,11 +1,12 @@
 <template>
   <header class="header">
     <div class="container">
-      <h1 class="logo">Outperform</h1>
+      <h1 class="logo">Outperf<i class="las la-atom"></i>rm</h1>
       <nav id="nav">
         <router-link to="/">Home</router-link>
         <router-link to="/team">Team</router-link>
         <router-link class="smth" to="/about">About</router-link>
+        <a href="#footer">Contact</a>
       </nav>
     </div>
   </header>
@@ -27,6 +28,14 @@
     z-index: 2;
   }
 
+  i.las {
+    transition: all 1s ease;
+  }
+
+  h1.logo:hover i.las {
+    transform: rotate(360deg);
+  }
+
   .container {
     display: flex;
     justify-content: space-between;
@@ -44,6 +53,12 @@
     font-size: 1.2rem;
     border-bottom: 1px solid transparent;
     transition: all 0.5s ease;
+  }
+
+  #nav a.router-link-exact-active::after {
+    content: "";
+    transform: scaleX(1);
+    border-bottom: solid 2px #000;
   }
 
   nav#nav a::after {
