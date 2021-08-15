@@ -1,6 +1,6 @@
 <template>
   <main class="main-team">
-    <TeamContainer v-bind:users="users" />
+    <TeamContainer v-bind:users="users" v-on:del-user="deleteUser" />
     <Footer />
   </main>
 </template>
@@ -21,6 +21,16 @@
       return {
         users: [],
       };
+    },
+    methods: {
+      deleteUser(id) {
+        axios
+          .delete(`https://jsonplaceholder.typicode.com/users/${id}`)
+          .then(
+            () => (this.users = this.users.filter((user) => user.id !== id))
+          )
+          .catch((err) => console.log(err));
+      },
     },
     created() {
       axios

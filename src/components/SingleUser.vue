@@ -4,6 +4,9 @@
       <div class="profile-image">
         {{ getFirstInitial() }} {{ getSecondInitial() }}
       </div>
+      <button @click="$emit('del-user', user.id)" class="del">
+        Delete User
+      </button>
       <div class="user-details">
         <p class="name">{{ user.name }}</p>
         <p class="username">{{ user.username }}</p>
@@ -62,6 +65,19 @@
   .upper-flex .website {
     text-decoration: underline;
     cursor: pointer;
+  }
+  .upper-flex .del {
+    align-self: flex-start;
+    background: rgb(187, 24, 24);
+    font-size: 1.1rem;
+    cursor: pointer;
+    color: #fff;
+    padding: 1rem;
+    border: none;
+  }
+  .upper-flex .del:hover {
+    background: rgb(211, 12, 12);
+    text-decoration: underline;
   }
   .lower-flex {
     display: flex;
