@@ -1,0 +1,115 @@
+<template>
+  <main class="main">
+    <div class="action">
+      <h1 class="title">
+        Make Your Dream Come True
+      </h1>
+      <button @mouseenter="enterImage" @mouseleave="exitImage" class="btn">
+        <span>Meet The Team</span>
+        <i class="las la-angle-double-right la-2x"></i>
+      </button>
+    </div>
+    <div class="team">
+      <p class="lead">
+        A reliable team to make your website look beautiful and professional.
+      </p>
+      <img :class="{ entered: show }" src="../assets/team.jpg" alt="team" />
+    </div>
+  </main>
+</template>
+
+<script>
+  export default {
+    name: "CallToAction",
+    data() {
+      return {
+        show: false,
+      };
+    },
+    methods: {
+      enterImage() {
+        console.log("enter");
+        this.show = true;
+      },
+      exitImage() {
+        console.log("exit");
+        this.show = false;
+      },
+    },
+  };
+</script>
+
+<style>
+  main.main {
+    height: 100vh;
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+    overflow-x: hidden;
+  }
+
+  div.action {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 2rem;
+  }
+
+  h1.title {
+    font-size: 4.5rem;
+  }
+
+  button.btn {
+    padding: 1rem 2rem;
+    border: 2px solid #000;
+    font-size: 1.2rem;
+    background: transparent;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    transition: all 0.5s ease;
+  }
+
+  button.btn i {
+    transition: all 0.5s ease;
+  }
+
+  button.btn:hover {
+    color: #abcffd;
+    background: #000;
+  }
+
+  button.btn:hover i {
+    transform: translateX(10px);
+  }
+
+  div.team {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    gap: 2rem;
+  }
+
+  div.team img {
+    object-fit: cover;
+    object-position: center center;
+    border-radius: 50%;
+    transform: translateX(100%);
+    opacity: 0;
+    transition: all 0.5s ease;
+  }
+
+  div.team img.entered {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  p.lead {
+    font-size: 1.4rem;
+    align-self: center;
+  }
+</style>

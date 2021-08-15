@@ -19,7 +19,10 @@
 
 <style scoped>
   header.header {
-    height: 5rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
     height: 15vh;
     z-index: 2;
   }

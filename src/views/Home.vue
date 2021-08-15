@@ -1,23 +1,27 @@
 <template>
   <div class="home">
-    <img src="../assets/pexels-eva-elijas-7661135.jpg" alt="marketing" />
+    <div class="container">
+      <CallToAction />
+    </div>
   </div>
 </template>
 
 <script>
+  import CallToAction from "../components/CallToAction.vue";
   export default {
     name: "Home",
-    components: {},
+    components: {
+      CallToAction,
+    },
   };
 </script>
 
 <style scoped>
   .home {
-    z-index: -1;
-    position: absolute;
-    top: 0;
-    left: 0;
-    overflow: hidden;
+    position: relative;
     height: 100vh;
+    /* background: url("../assets/pexels-eva-elijas-7661135.jpg") top center/cover
+      no-repeat; */
+    background-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
   }
 </style>
