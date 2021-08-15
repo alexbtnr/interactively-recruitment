@@ -46,7 +46,7 @@
   nav#nav {
     width: 40%;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
   }
 
   nav#nav a {
