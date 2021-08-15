@@ -28,11 +28,9 @@
     },
     methods: {
       enterImage() {
-        console.log("enter");
         this.show = true;
       },
       exitImage() {
-        console.log("exit");
         this.show = false;
       },
     },

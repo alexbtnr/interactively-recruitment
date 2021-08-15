@@ -47,6 +47,10 @@
     padding: 0;
   }
 
+  html {
+    scroll-behavior: smooth;
+  }
+
   body {
     font-family: Roboto, Arial, Helvetica, sans-serif;
     line-height: 1.4;

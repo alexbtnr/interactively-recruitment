@@ -3,15 +3,18 @@
     <div class="container">
       <CallToAction />
     </div>
+    <Footer />
   </div>
 </template>
 
 <script>
   import CallToAction from "../components/CallToAction.vue";
+  import Footer from "../components/Footer.vue";
   export default {
     name: "Home",
     components: {
       CallToAction,
+      Footer,
     },
   };
 </script>
