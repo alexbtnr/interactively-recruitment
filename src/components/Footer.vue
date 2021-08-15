@@ -49,9 +49,6 @@
   footer {
     background: #333;
     color: #eee;
-    /* position: fixed; 
-    bottom: 0;
-    left: 0; */
     width: 100%;
   }
 
@@ -59,6 +56,7 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
+    width: 100%;
     height: 5rem;
   }
 
