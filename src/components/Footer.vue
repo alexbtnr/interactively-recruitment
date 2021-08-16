@@ -82,7 +82,6 @@
   }
 
   .footer-container .socials i {
-    /* background: red; */
     transition: all 0.5s ease;
     border-radius: 50%;
     margin-left: 1rem;
@@ -92,5 +91,35 @@
     transform: scale(1.2);
     color: #abcffd;
     /* background: #eee; */
+  }
+
+  @media (max-width: 768px) {
+    footer.footer {
+      height: 100%;
+      height: 15rem;
+    }
+    footer.footer .container {
+      width: 95%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .footer-container {
+      /* display: block; */
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 2rem;
+    }
+    .socials {
+      display: flex;
+      justify-content: space-evenly;
+      width: 100%;
+    }
+
+    .socials i {
+      margin: 0;
+    }
   }
 </style>

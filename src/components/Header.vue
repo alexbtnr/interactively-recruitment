@@ -72,4 +72,21 @@
   nav#nav a:hover::after {
     transform: scaleX(1);
   }
+
+  @media (max-width: 768px) {
+    .header .container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+    .header .container .logo {
+      margin: 1rem 0;
+    }
+    nav#nav {
+      justify-content: center;
+      gap: 2rem;
+    }
+  }
 </style>

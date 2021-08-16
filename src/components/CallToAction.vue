@@ -5,7 +5,8 @@
         Make Your Dream Come True
       </h1>
       <button @mouseenter="enterImage" @mouseleave="exitImage" class="btn">
-        <span>Meet The Team</span>
+        <router-link to="/team"><span>Meet The Team</span></router-link>
+
         <i class="las la-angle-double-right la-2x"></i>
       </button>
     </div>
@@ -109,5 +110,34 @@
   p.lead {
     font-size: 1.4rem;
     align-self: center;
+  }
+
+  @media (max-width: 768px) {
+    main.main {
+      padding-top: 15vh;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    div.action {
+      height: 50%;
+    }
+    div.action h1 {
+      font-size: 2rem;
+      text-align: center;
+    }
+    div.action button.btn {
+      margin: 0 auto;
+    }
+    div.team img {
+      display: none;
+    }
+    div.team {
+      width: 100%;
+    }
+    div.team p.lead {
+      margin: 0 auto;
+      text-align: center;
+    }
   }
 </style>
