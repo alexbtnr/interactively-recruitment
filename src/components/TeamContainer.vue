@@ -12,7 +12,15 @@
             <i class="las la-angle-double-down la-2x"></i>
           </button>
         </div>
-        <div class="single-user-container">
+        <div v-if="sorted" class="single-user-container">
+          <div v-bind:key="user.id" v-for="user in usersSorted">
+            <SingleUser
+              v-bind:user="user"
+              v-on:del-user="$emit('del-user', user.id)"
+            />
+          </div>
+        </div>
+        <div v-else class="single-user-container">
           <div v-bind:key="user.id" v-for="user in users">
             <SingleUser
               v-bind:user="user"
@@ -30,6 +38,12 @@
   export default {
     name: "TeamContainer",
     props: ["users"],
+    data() {
+      return {
+        usersSorted: this.users,
+        sorted: false,
+      };
+    },
     components: {
       SingleUser,
     },
@@ -39,14 +53,16 @@
           return a.name > b.name ? 1 : -1;
         });
 
-        this.users = sortedUsers;
+        this.usersSorted = sortedUsers;
+        this.sorted = true;
       },
       sortDesc() {
         const sortedUsers = this.users.slice().sort((a, b) => {
           return a.name < b.name ? 1 : -1;
         });
 
-        this.users = sortedUsers;
+        this.usersSorted = sortedUsers;
+        this.sorted = true;
       },
     },
   };
@@ -101,5 +117,30 @@
   }
   .container .sort-buttons button:hover i.la-angle-double-down {
     transform: translateY(10px);
+  }
+
+  @media (max-width: 768px) {
+    .single-user-container {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1rem;
+    }
+
+    .container .sort-buttons {
+      flex-direction: column;
+      width: 16rem;
+      gap: 1rem;
+      margin: 0 auto 2rem;
+    }
+    .container .sort-buttons button {
+      border: 2px solid #000;
+      font-size: 1.2rem;
+      background: transparent;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      transition: all 0.5s ease;
+      display: flex;
+    }
   }
 </style>

@@ -32,4 +32,10 @@
     justify-content: center;
     align-items: center;
   }
+
+  @media (max-width: 768px) {
+    h1 {
+      text-align: center;
+    }
+  }
 </style>

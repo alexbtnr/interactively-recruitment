@@ -112,7 +112,7 @@
     align-self: center;
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 825px) {
     main.main {
       padding-top: 15vh;
       flex-direction: column;

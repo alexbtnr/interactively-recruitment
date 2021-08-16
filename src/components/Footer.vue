@@ -90,7 +90,6 @@
   .footer-container .socials i:hover {
     transform: scale(1.2);
     color: #abcffd;
-    /* background: #eee; */
   }
 
   @media (max-width: 768px) {
@@ -106,7 +105,6 @@
       align-items: center;
     }
     .footer-container {
-      /* display: block; */
       flex-direction: column;
       justify-content: center;
       align-items: center;
@@ -120,6 +118,11 @@
 
     .socials i {
       margin: 0;
+    }
+  }
+  @media (max-width: 825px) {
+    footer.footer .container {
+      width: 95%;
     }
   }
 </style>

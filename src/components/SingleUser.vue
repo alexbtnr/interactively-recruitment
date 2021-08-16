@@ -87,4 +87,29 @@
   .lower-flex i {
     font-size: 1.2rem;
   }
+
+  @media (max-width: 825px) {
+    .single-user {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    .upper-flex {
+      flex-direction: column;
+      text-align: center;
+      justify-content: center;
+      align-items: center;
+      gap: 1rem;
+    }
+    .upper-flex .del {
+      align-self: center;
+    }
+    .lower-flex {
+      flex-direction: column;
+      text-align: center;
+      justify-content: center;
+      align-items: center;
+      gap: 1rem;
+    }
+  }
 </style>
