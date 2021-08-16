@@ -79,6 +79,9 @@
     color: #abcffd;
     background: #000;
   }
+  button.btn:hover a {
+    color: #abcffd;
+  }
 
   button.btn:hover i {
     transform: translateX(10px);
