@@ -16,6 +16,9 @@
       CallToAction,
       Footer,
     },
+    created() {
+      document.title = "Outperform | HomePage";
+    },
   };
 </script>
 

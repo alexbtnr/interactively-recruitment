@@ -33,6 +33,7 @@
       },
     },
     created() {
+      document.title = "Outperform | Team";
       axios
         .get("https://jsonplaceholder.typicode.com/users")
         .then((res) => (this.users = res.data))

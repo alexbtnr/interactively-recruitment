@@ -16,6 +16,9 @@
     components: {
       Footer,
     },
+    created() {
+      document.title = "Outperform | About";
+    },
   };
 </script>
 
