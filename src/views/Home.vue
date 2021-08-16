@@ -26,12 +26,6 @@
   .home {
     position: relative;
     height: 100vh;
-    /* background: url("../assets/pexels-eva-elijas-7661135.jpg") top center/cover
-      no-repeat; */
     background-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
-  }
-  @media (max-width: 768px) {
-    .home {
-    }
   }
 </style>
