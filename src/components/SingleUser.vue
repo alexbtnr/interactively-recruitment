@@ -4,7 +4,11 @@
       <div class="profile-image">
         {{ getFirstInitial() }} {{ getSecondInitial() }}
       </div>
-      <button @click="$emit('del-user', user.id)" class="del">
+      <button
+        @tap="$emit('del-user', user.id)"
+        @click="$emit('del-user', user.id)"
+        class="del"
+      >
         Delete User
       </button>
       <div class="user-details">
